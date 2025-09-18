@@ -25,12 +25,12 @@ Technology Stack
    • LoRa Module(SX1278)
    • GPS Module (NEO-8M)
 
-2) Firmware:
+3) Firmware:
    • C++ (Arduino Framework)
    • Libraries: TinyGPS++, LoRa.h
 
-3) Backend & Cloud:
+5) Backend & Cloud:
    • Firebase
 
-4) Data Visualization:
+6) Data Visualization:
    • StreamLit
