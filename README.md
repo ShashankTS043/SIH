@@ -17,7 +17,9 @@ Core Features:
 
 • Cloud Analytics Backend: Collects anonymized data for traffic analysis and infrastructure planning.
 
+
 System Architecture
+
 The system consists of three main components:
 
 On-Board Unit (OBU): An ESP32-based device with a LoRa module and GPS installed in each vehicle. It is responsible for collecting data and communicating with other vehicles.
