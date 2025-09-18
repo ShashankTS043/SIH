@@ -3,6 +3,7 @@ An open-source, low-cost V2V communication system using LoRa to enhance road saf
 
 
 About The Project
+
 This project is an open-source implementation of a low-cost, decentralized Vehicle-to-Vehicle (V2V) communication system designed to enhance road safety. By leveraging LoRa (Long Range) technology, it provides an affordable and scalable alternative to traditional Intelligent Transportation Systems (ITS). Our goal is to make advanced safety features accessible in areas with limited cellular coverage or infrastructure, particularly in rural and developing regions.
 
 
