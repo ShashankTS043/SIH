@@ -21,9 +21,9 @@ The system consists of three main components:
 
 Technology Stack  
 1) Hardware:
-   ESP32 Microcontroller
-   LoRa Module(SX1278)
-   GPS Module (NEO-8M)
+   ESP32 Microcontroller,
+   LoRa Module(SX1278),
+   GPS Module (NEO-8M).
 
 3) Firmware:
    C++ (Arduino Framework)
