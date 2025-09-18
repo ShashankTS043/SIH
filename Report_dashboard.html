@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Traffic Report</title>
+</head>
+
+<body class="bg-[#172e54] text-white font-sans">
+ <nav class="fixed top-0 w-full bg-[#2b4a7a] shadow-md z-50">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="flex justify-between items-center py-3">
+            <a href="/">
+                <div class="text-2xl font-bold text-white tracking-widest flex items-center gap-2">
+                    <!-- Logo image -->
+                    <img src="/static/logo.jpg" alt="Logo" class="h-8 w-8 rounded-md px-4">
+                    Synaptic Drive
+                </div>
+            </a>
+            <div class="space-x-10 flex flex-row">
+                <div class="relative group">
+                    <h1 class="text-white text-lg font-semibold hover:scale-110 transition cursor-pointer">About</h1>
+                    <div class="absolute left-0 mt-2 w-45 rounded shadow-lg border border-[#7992ba] 
+                                opacity-0 scale-95 -translate-y-2
+                                group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
+                                transform transition-all duration-500 ease-in-out origin-top">
+                        <a href="#why-choose"
+                            class="block px-4 py-2 text-white border border-[#7992ba] hover:bg-[#7992ba]/80">Features Offered</a>
+                        <a href="#what-synaptic-does"
+                            class="block px-4 py-2 text-white border border-[#7992ba] hover:bg-[#7992ba]/80">What Synaptic Drive does?</a>
+                        <a href="#tech-stack"
+                            class="block px-4 py-2 text-white border border-[#7992ba] hover:bg-[#7992ba]/80">Technology Stack</a>
+                        <a href="#Impact"
+                            class="block px-4 py-2 text-white border border-[#7992ba] hover:bg-[#7992ba]/80">Impact</a>
+                    </div>
+                </div>
+                <a href="/report" class="text-white text-lg font-semibold hover:scale-110 transition">Report</a>
+                <a href="/map" class="text-white text-lg font-semibold hover:scale-110 transition">Map</a>
+                <a href="/heat" class="text-white text-lg font-semibold hover:scale-110 transition">Heat Map</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+  <header class="pt-28 pb-12 text-center text-white">
+    <h1 class="md:text-4xl font-extrabold mb-4">Traffic Simulation Report</h1>
+    <p class="max-w-2xl mx-auto text-lg opacity-90">
+      Visual insights from intersection and congestion simulations.
+    </p>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 py-12 space-y-16">
+
+    <section>
+      <h2 class="text-2xl font-bold text-white mb-4 tracking-widest">Intersection Data</h2>
+      {% if not has_intersection %}
+      <p class="text-red-600">The CSV file is empty. Please run a simulation first.</p>
+      {% else %}
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-[#91a3c2]/20 border border-[#7b8dab] p-6 rounded-2xl shadow">
+          <h3 class="font-semibold mb-3 text-white">Sample (10 rows)</h3>
+          <div class="flex flex-row ml-3 mb-3 w-full ">
+            <div class="w-1/3">S NO</div>
+            <div class="w-1/3">Speed</div>
+            <div class="w-1/3 text-center">Vehicle ID</div>
+          </div>
+          {{ sample_intersection.to_html(classes="table-auto border-collapse overflow-x-scroll border border-white text-center text-white w-full")|safe }}
+        </div>
+        <div class="bg-[#91a3c2]/20 border border-[#7b8dab] p-6 rounded-2xl shadow">
+          {{ intersection_plot|safe }}
+        </div>
+      </div>
+      {% endif %}
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-white mb-4 tracking-widest">Congestion Data</h2>
+      {% if not has_congestion %}
+      <p class="text-red-600">The CSV file is empty. Please run a simulation first.</p>
+      {% else %}
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-[#91a3c2]/20 border border-[#7b8dab] p-6 rounded-2xl shadow overflow-x-hidden">
+          <h3 class="font-semibold mb-3 text-white">Sample (10 rows)</h3>
+          <div class="flex flex-row ml-3 w-full mb-3 ">
+            <div class="w-1/3">S NO</div>
+            <div class="w-1/3 text-center mr-6">Speed</div>
+            <div class="w-1/3 text-center">Vehicle ID</div>
+          </div>
+          {{ sample_congestion.to_html(classes="table-auto overflow-x-scroll border-collapse text-center text-white border border-gray-300 w-full")|safe }}
+        </div>
+        <div class="bg-[#91a3c2]/20 border border-[#7b8dab] p-6 rounded-2xl shadow">
+          {{ congestion_plot|safe }}
+        </div>
+      </div>
+      {% endif %}
+    </section>
+  </main>
+
+  <footer class="bg-[#2b4a7a] text-white text-center py-6 mt-12">
+    <p class="text-sm">© 2025 Traffic Simulation Report. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
