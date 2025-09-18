@@ -16,3 +16,12 @@ Core Features:
 • Intelligent Intersection Assist: V2V communication to prevent collisions at blind corners and junctions.
 
 • Cloud Analytics Backend: Collects anonymized data for traffic analysis and infrastructure planning.
+
+System Architecture
+The system consists of three main components:
+
+On-Board Unit (OBU): An ESP32-based device with a LoRa module and GPS installed in each vehicle. It is responsible for collecting data and communicating with other vehicles.
+
+V2V Mesh Network: A self-forming, self-healing network created by the OBUs using the LoRa protocol for direct communication.
+
+Cloud Platform: A backend service that receives data from vehicles (when an internet connection is available via a gateway) for storage, analysis, and visualization.
