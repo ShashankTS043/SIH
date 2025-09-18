@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Synaptic Drive</title>
+    <link rel="shortcut icon" href="/static/logo.jpg" type="image/x-icon">
+</head>
+
+<body class="bg-[#172e54] text-white font-sans">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-[#2b4a7a] shadow-md z-50">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="flex justify-between items-center py-3">
+            <a href="/">
+                <div class="text-2xl font-bold text-white tracking-widest flex items-center gap-2">
+                    <!-- Logo image -->
+                    <img src="/static/logo.jpg" alt="Logo" class="z-60 h-8 w-8 rounded-md">
+                    Synaptic Drive
+                </div>
+            </a>
+            <div class="space-x-10 flex flex-row">
+                <div class="relative group">
+                    <h1 class="text-white text-lg font-semibold hover:scale-110 transition cursor-pointer">About</h1>
+                    <div class="absolute left-0 mt-2 w-45 rounded shadow-lg border border-[#7992ba] 
+                                opacity-0 scale-95 -translate-y-2
+                                group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
+                                transform transition-all duration-500 ease-in-out origin-top">
+                        <a href="#why-choose"
+                            class="block px-4 py-2 text-white border border-[#7992ba] hover:bg-[#7992ba]/80">Features Offered</a>
+                        <a href="#what-synaptic-does"
+                            class="block px-4 py-2 text-white border border-[#7992ba] hover:bg-[#7992ba]/80">What Synaptic Drive does?</a>
+                        <a href="#tech-stack"
+                            class="block px-4 py-2 text-white border border-[#7992ba] hover:bg-[#7992ba]/80">Technology Stack</a>
+                        <a href="#Impact"
+                            class="block px-4 py-2 text-white border border-[#7992ba] hover:bg-[#7992ba]/80">Impact</a>
+                    </div>
+                </div>
+                <a href="/report" class="text-white text-lg font-semibold hover:scale-110 transition">Report</a>
+                <a href="/map" class="text-white text-lg font-semibold hover:scale-110 transition">Map</a>
+                <a href="/heat" class="text-white text-lg font-semibold hover:scale-110 transition">Heat Map</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Header / Hero -->
+    <header class="pt-28 pb-16 text-center text-white items-start h-screen flex flex-col w-full items-center justify-center">
+        <h1 class="md:text-5xl ml-75 font-extrabold mb-4 font-mono">Synaptic Drive</h1>
+        <p class="max-w-2xl mx-auto font-mono text-justify text-lg md:text-xl opacity-90">
+            Real-time traffic dynamics powered by Vehicle-to-Vehicle (V2V) communication and intelligent transportation systems.Traditional traffic management is reactive, struggling with sudden congestion or accidents. This causes inefficient flow, longer travel times, and higher risks. Our project builds a proactive,data-driven system to address this.
+        </p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-8 space-y-12 ">
+        <!-- Goals -->
+        <section id="why-choose" class="pt-12">
+        <h2 class="text-4xl font-bold mb-8 text-left tracking-widest mt-12">Key Features</h2>
+        <div class="flex">
+            <!-- Left side: arrow tabs -->
+            <div class="flex flex-col space-y-4 w-1/3">
+            <div class="flex items-center">
+            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-[#7b8dab]/80 text-white font-bold mr-4">1</span>
+            <div class="feature-tab flex-1 bg-[#91a3c2]/20 border border-[#7b8dab] rounded-r-full pl-6 pr-12 py-3 text-left text-2xl hover:bg-[#7b8dab]/30 transition-all"
+                data-Description="Identify traffic jams in real time.">
+                Detect Congestion
+              </div>
+            </div>
+            <div class="flex items-center">
+            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-[#7b8dab]/80 text-white font-bold mr-4">2</span>
+            <div class="feature-tab flex-1 cursor-pointer bg-[#91a3c2]/20 border border-[#7b8dab] rounded-r-full pl-6 pr-12 py-3 text-left text-2xl hover:bg-[#7b8dab]/30 transition-all"
+                data-Description="Dynamically reroute vehicles to faster paths.">
+                Enable Rerouting
+            </div>
+              </div>
+            <div class="flex items-center">
+            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-[#7b8dab]/80 text-white font-bold mr-4">3</span>
+            <div class="feature-tab  flex-1 bg-[#91a3c2]/20 border border-[#7b8dab] rounded-r-full pl-6 pr-12 py-3 text-left text-2xl hover:bg-[#7b8dab]/30 transition-all"
+                data-Description="Simulate V2V alerts for slower vehicles at intersections.">
+                Improve Safety
+            </div>
+            </div>
+            <div class="flex items-center">
+            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-[#7b8dab]/80 text-white font-bold mr-4">4</span>
+            <div class="feature-tab flex-1 cursor-pointer bg-[#91a3c2]/20 border border-[#7b8dab] rounded-r-full pl-6 pr-12 py-3 text-left text-2xl hover:bg-[#7b8dab]/30 transition-all"
+                data-Description="Use DBSCAN on historical data to find accident-prone areas.">
+                Identify Hotspots
+            </div>
+              </div>
+            <div class="flex items-center">
+            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-[#7b8dab]/80 text-white font-bold mr-4">5</span>
+            <div class="feature-tab flex-1 cursor-pointer bg-[#91a3c2]/20 border border-[#7b8dab] rounded-r-full pl-6 pr-12 py-3 text-left text-2xl hover:bg-[#7b8dab]/30 transition-all"
+                data-Description="Collect, process, and visualize data from multiple simulations via the cloud.">
+                Scalable Analytics
+            </div>
+              </div>
+            </div>
+
+            <!-- Right side: static paragraph that updates -->
+            <div class="flex-1 ml-12 p-6 text-white text-2xl font-mono">
+            <p id="feature-description">Hover over a feature to see details here.</p>
+            </div>
+        </div>
+        </section>
+
+            <script>
+            const tabs = document.querySelectorAll('.feature-tab');
+            const descriptionEl = document.getElementById('feature-description');
+
+            function setActiveTab(tab) {
+                tabs.forEach(t => t.classList.remove('bg-[#91a3c2]/20')); // remove highlight from all
+                tab.classList.add('bg-[#91a3c2]/20'); // add highlight to current
+            }
+
+            tabs.forEach(tab => {
+                tab.addEventListener('mouseover', () => {
+                const desc = tab.dataset.description;
+                descriptionEl.innerText = desc;
+                setActiveTab(tab);
+                });
+            });
+
+            // Set default active tab on page load
+            window.addEventListener('DOMContentLoaded', () => {
+                const firstTab = tabs[0];
+                descriptionEl.innerText = firstTab.dataset.description;
+                setActiveTab(firstTab);
+            });
+            </script>
+
+
+
+        <!-- Methodology -->
+        <section id="what-synaptic-does" class="opacity-0 transition-opacity duration-700 scroll-mt-12 flex flex-col ">
+            <h2 class="text-4xl font-bold mb-6 mt-6 text-left tracking-widest">What we do</h2>
+            <div class="flex">
+            <div class="grid md:grid-cols-1 gap-6">
+                <div class="bg-[#91a3c2]/20 p-6 border border-[#7b8dab] max-w-md min-h-48 rounded-xl shadow-lg hover:scale-105 transition-transform">
+                    <h3 class="font-bold text-lg mb-2">Congestion Simulation</h3>
+                    <p>Highway with bottleneck and bypass; reroutes vehicles based on travel time.</p>
+                </div>
+                <div class=" bg-[#91a3c2]/20 p-6 border border-[#7b8dab] max-w-md min-h-48 rounded-xl shadow-lg hover:scale-105 transition-transform">
+                    <h3 class="font-bold text-lg mb-2">Intersection Simulation</h3>
+                    <p>Monitors speeds at junctions; flags slower vehicles with V2V alerts.</p>
+                </div>
+                <div class="bg-[#91a3c2]/20 p-6 border border-[#7b8dab] max-w-md min-h-48 rounded-xl shadow-lg hover:scale-105 transition-transform">
+                    <h3 class="font-bold text-lg mb-2">Crash & Emergency Response</h3>
+                    <p>Detects crashes, triggers cloud alerts, dispatches ambulance, clears paths dynamically.</p>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section id="tech-stack" class="opacity-0 transition-opacity duration-700 scroll-mt-18 flex flex-col">
+            <h2 class="text-4xl font-bold mb-6 text-left tracking-widest">Technology Stack</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-[#91a3c2]/20 border border-[#7b8dab] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+                    <h3 class="font-bold mb-2">SUMO</h3>
+                    <p>Microscopic traffic simulator.</p>
+                    <h3 class="font-bold mt-4 mb-2">Python + TraCI</h3>
+                    <p>Real-time simulation control.</p>
+                    <h3 class="font-bold mt-4 mb-2">Firebase Firestore</h3>
+                    <p>Cloud NoSQL database.</p>
+                </div>
+                <div class="bg-[#91a3c2]/20 border border-[#7b8dab] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+                    <h3 class="font-bold mb-2">Streamlit</h3>
+                    <p>Interactive dashboard for visualization.</p>
+                    <h3 class="font-bold mt-4 mb-2">DBSCAN</h3>
+                    <p>Clustering model for hotspot detection.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact -->
+        <section id="Impact" class="opacity-0 transition-opacity duration-700">
+            <h2 class="text-3xl font-bold mb-6 text-left tracking-widest">Impact</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-[#91a3c2]/20 border border-[#7b8dab] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+                    <h3 class="font-bold mb-2">Proactive Traffic Control</h3>
+                    <p>Prevents gridlock by rerouting.</p>
+                </div>
+                <div class="bg-[#91a3c2]/20 border border-[#7b8dab] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+                    <h3 class="font-bold mb-2">Safety & Communication</h3>
+                    <p>V2V alerts reduce collision risks.</p>
+                </div>
+                <div class="bg-[#91a3c2]/20 border border-[#7b8dab] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+                    <h3 class="font-bold mb-2">Emergency Response</h3>
+                    <p>Enables real-time ambulance priority.</p>
+                </div>
+                <div class="bg-[#91a3c2]/20 border border-[#7b8dab] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+                    <h3 class="font-bold mb-2">Scalable Analytics</h3>
+                    <p>Cloud data supports predictive models and urban planning.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#2b4a7a] text-center py-6 mt-12">
+        <p class="text-sm opacity-70">© 2025 Synaptic Drive. All rights reserved.</p>
+    </footer>
+</body>
+
+<!-- Background gradients -->
+<style>
+    body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background-image:
+            radial-gradient(1000px at 90% 80%, rgba(123, 103, 170, 0.212) 0%, transparent 50%),
+            radial-gradient(1200px at 85% 95%, #b3a3da88 0%, transparent 65%),
+            radial-gradient(700px at 95% 70%, rgba(124, 96, 189, 0.322) 0%, transparent 70%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(120px);
+        opacity: 1;
+        pointer-events: none;
+    }
+</style>
+
+<!-- Scroll fade-in animation -->
+<script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100');
+            }
+        });
+    }, { threshold: 0.2 });
+    sections.forEach(section => observer.observe(section));
+</script>
+</html>
