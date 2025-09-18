@@ -6,6 +6,9 @@ This project is an open-source implementation of a low-cost, decentralized Vehic
 
 Core Features:
 • Instantaneous Crash Detection: Automatically broadcasts alerts to nearby vehicles and a cloud dashboard.
+
 • Real-Time Congestion Monitoring: A distributed network for detecting and reporting traffic slowdowns.
+
 • Intelligent Intersection Assist: V2V communication to prevent collisions at blind corners and junctions.
+
 • Cloud Analytics Backend: Collects anonymized data for traffic analysis and infrastructure planning.
