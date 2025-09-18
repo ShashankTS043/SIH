@@ -17,4 +17,20 @@ System Architecture
 The system consists of three main components:  
 • On-Board Unit (OBU): An ESP32-based device with a LoRa module and GPS installed in each vehicle. It is responsible for collecting data and communicating with other vehicles.  
 • V2V Mesh Network: A self-forming, self-healing network created by the OBUs using the LoRa protocol for direct communication.  
-• Cloud Platform: A backend service that receives data from vehicles (when an internet connection is available via a gateway) for storage, analysis, and visualization.
+• Cloud Platform: A backend service that receives data from vehicles (when an internet connection is available via a gateway) for storage, analysis, and visualization.  
+
+Technology Stack  
+1) Hardware:
+   • ESP32 Microcontroller
+   • LoRa Module(SX1278)
+   • GPS Module (NEO-8M)
+
+2) Firmware:
+   • C++ (Arduino Framework)
+   • Libraries: TinyGPS++, LoRa.h
+
+3) Backend & Cloud:
+   • Firebase
+
+4) Data Visualization:
+   • StreamLit
