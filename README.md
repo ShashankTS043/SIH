@@ -26,7 +26,7 @@ Technology Stack
    GPS Module (NEO-8M).
 
 3) Firmware:
-   C++ (Arduino Framework)
+   C++ (Arduino Framework),
    Libraries: TinyGPS++, LoRa.h
 
 5) Backend & Cloud:
